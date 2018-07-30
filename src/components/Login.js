@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { googleLogin, twitterLogin } from '../actions/userAction';
+import AboutAOC from './AboutAOC';
 
 class Login extends Component {
     componentWillMount() {
@@ -18,30 +19,71 @@ class Login extends Component {
 
     render() {
         return (
-            <div className="container-fluid">
-                <div className="row">
-                    <div className="col-sm-12 jumbotron" style={{ marginTop: '-20px' }}>
-                        <h1>DIARY | {new Date().getFullYear()}</h1>
-                        <h2>
-                            <i>
-                                Login with your favourite <b>Social Network</b> to start writting!
-                            </i>
-                        </h2>
+            <div>
+                <div className="container-fluid">
+                    <div className="row text-center">
+                        <div className="col-sm-12 jumbotron" style={{ marginTop: '-20px' }}>
+                            <h1>Welcome to <b>A</b>natomy<b>O</b>f<b>C</b>onsensus</h1>
+                            <p><i>"The best no fluff education system that teaches you the power of blockchain <b>by using it.</b>"</i></p>
+                        </div>
                     </div>
 
-                    <div className="col-sm-6 text-center">
-                        <button className="btn btn-danger btn-lg" onClick={this.props.googleLogin}>
-                            Login with Google
-                        </button>
+                </div>
+
+
+                <div className="container">
+                    <div className="col-sm-12">
+
+                        <AboutAOC />
                     </div>
-                    <br />
-                    <div className="col-sm-6 text-center">
-                        <button className="btn btn-success btn-lg" onClick={this.props.twitterLogin}>
-                            Login with Twitter
-                        </button>
+
+                </div>
+
+
+                <br />
+
+
+                <div className="continer-fluid">
+                    <div className="row text-center">
+
+                        <div className="col-sm-12">
+                            <p><b>Create an account below to learn how to buy Ether to get access to this system.</b></p>
+                            <br />
+                            <br />
+                        </div>
+
+
+                        <div className="col-sm-6">
+                            <button className="btn btn-danger btn-lg" onClick={this.props.googleLogin}>Login with Google</button>
+                        </div>
+
+                        <br />
+
+                        <div className="col-sm-6">
+                            <button className="bt btn-success btn-lg" onClick={this.props.twitterLogin}>Login with Twitter</button>
+                        </div>
+
+
+
+
                     </div>
                 </div>
+                <br />
+                <br />
+
+                <div className="container">
+                    <div className="jumbotron">
+
+                        <p> <i>commenting/suggestions box coming soon...</i></p>
+                    </div>
+
+                </div>
+
+
+
+
             </div>
+
         );
     }
 }
