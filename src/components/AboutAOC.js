@@ -14,8 +14,7 @@ class AboutAOC extends Component {
                     <p>Consensus is "an agreement"</p>
                     <p></p>
                     <p>Expanding on this definition, AOC will take a fresh look at this mechanism
-                        "consensus" through the eyes of new blockchain capabilitis, and this course
-                        will hold you by the hand every step of the way.
+                        "consensus" through the eyes of new blockchain capabilities.
                         This mechanism "consensus" is important because its how we can get:
                     </p>
                     <ul>
