@@ -14,6 +14,8 @@ import Header from './routes/Header';
 import LoadingComponent from './components/LoadingComponent';
 import AuthenticatedComponent from './components/AuthenticatedComponent';
 import DeveloperComponent from './components/DeveloperComponent';
+import NoteDetail from './components/NoteDetail';
+
 
 // create redux store -> reducers -> 'actions - actionType' | applyMiddleware()
 
