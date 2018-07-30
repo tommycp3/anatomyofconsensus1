@@ -13,6 +13,7 @@ import Login from './components/Login';
 import Header from './routes/Header';
 import LoadingComponent from './components/LoadingComponent';
 import AuthenticatedComponent from './components/AuthenticatedComponent';
+import DeveloperComponent from './components/DeveloperComponent';
 
 // create redux store -> reducers -> 'actions - actionType' | applyMiddleware()
 
@@ -27,6 +28,7 @@ ReactDOM.render(
                 <div>
                     <Switch>
                         <Route path="/login" component={Login} exact={true} />
+                        <Route path="/developers" component={DeveloperComponent} exact={true} />
                         <AuthenticatedComponent>
                             <Header />
                             <Route path="/" component={App} exact={true} />
