@@ -48,15 +48,16 @@ class App extends Component {
         return _.map(this.props.notes, (note, key) => {
             return (
                 <NoteCard key={key}>
-                    <Link to={`/${key}`} />
-                    <h2>{note.title}</h2>
+                    <Link to={`/${key}`} >
+                        <h2>{note.title}</h2>
+                    </Link>
                     <p>{note.body}</p>
                     {note.uid === this.props.user.uid && (
                         <button className="btn btn-danger btn-xs" onClick={() => this.props.deleteNote(key)}>
                             Delete
                         </button>
                     )}
-                    
+
 
                 </NoteCard>
             );
