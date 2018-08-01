@@ -53,9 +53,15 @@ class App extends Component {
                     </Link>
                     <p>{note.body}</p>
                     {note.uid === this.props.user.uid && (
-                        <button className="btn btn-danger btn-xs" onClick={() => this.props.deleteNote(key)}>
-                            Delete
+                        <div>
+                            <button className="btn btn-danger btn-xs" onClick={() => this.props.deleteNote(key)}>
+                                Delete
                         </button>
+                            <button className="btn btn-info btn-xs pull-right">
+                                <Link to={`/${key}`}>Update</Link>
+                            </button>
+                        </div>
+
                     )}
 
 
@@ -66,9 +72,26 @@ class App extends Component {
 
     render() {
         return (
+
+
             <div className="container-fluid">
                 <div className="row">
+
+                    <div className="col-sm-12 text-center">
+                        <h1></h1>
+                        <p>This system uses blockchain to catalize our human family to the Third Industrial Revolution</p>
+
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QX3M8Ka9vUA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                </div>
+
+
+
+                
+                <div className="row">
                     <div className="col-sm-6 col-sm-offset-3">
+                        {/*   
+
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
                                 <input
@@ -102,6 +125,9 @@ class App extends Component {
                         <br />
                         <br />
                         {this.renderNotes()}
+                        
+                        */}
+                        
                     </div>
                 </div>
             </div>
