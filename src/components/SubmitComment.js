@@ -40,6 +40,7 @@ class SubmitComment extends Component {
                             onChange={this.handleChange}
                             type="text"
                             name="commentBody"
+                            value={this.state.commentBody}
                             className="form-control no-boarder"
                             placeholder="Write comment...."
                             required
