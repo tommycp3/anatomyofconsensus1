@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { saveComment } from '../actions/notesAction';
 
 class SubmitComment extends Component {
     constructor(props) {
@@ -9,31 +10,43 @@ class SubmitComment extends Component {
         };
         // bind
         this.handleChange = this.handleChange.bind(this)
+        this.handleSubmit = this.handleSubmit.bind(this)
     };
 
     handleChange(e) {
         this.setState({
             commentBody: e.target.value
-        })
+        });
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+        const comment = {
+            commentBody: this.state.commentBody,
+            uid: this.props.uid
+        }
+        console.log(this.props.id, comment);
+        this.props.saveComment(this.props.id, comment);
+        this.setState({ commentBody: '' });
     }
 
 
     render() {
         return (
             <div>
-                <form>
+                <form onSubmit={this.handleSubmit}>
                     <div className="form-group">
                         <textarea
                             onChange={this.handleChange}
                             type="text"
                             name="commentBody"
                             className="form-control no-boarder"
-                            placeholder="Write comment.."
+                            placeholder="Write comment...."
                             required
                         />
                     </div>
                     <div className="form-group">
-                    <button className="btn btn-success">Add Comment</button>
+                        <button className="btn btn-success">Add Comment</button>
 
                     </div>
 
@@ -45,8 +58,8 @@ class SubmitComment extends Component {
 
 function mapStateToProps(state, ownProps) {
     return {
-        uid: state.user.id
+        uid: state.user.uid
     }
 }
 
-export default connect(mapStateToProps, {})(SubmitComment)
+export default connect(mapStateToProps, { saveComment })(SubmitComment)
