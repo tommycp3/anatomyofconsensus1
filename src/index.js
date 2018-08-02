@@ -17,6 +17,7 @@ import DeveloperComponent from './components/DeveloperComponent';
 import NoteDetail from './components/NoteDetail';
 
 
+
 // create redux store -> reducers -> 'actions - actionType' | applyMiddleware()
 
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));

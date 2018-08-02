@@ -81,13 +81,17 @@ class App extends Component {
                         <h1></h1>
                         <p>This system uses blockchain to catalize our human family to the Third Industrial Revolution</p>
 
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/QX3M8Ka9vUA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                        <div className="intrinsic-container intrinsic-container-16x9">
+                            <iframe src="https://www.youtube.com/embed/QX3M8Ka9vUA" allowfullscreen></iframe>
+                        </div>
+
                     </div>
                 </div>
 
 
 
-                
+
                 <div className="row">
                     <div className="col-sm-6 col-sm-offset-3">
                         {/*   
@@ -127,7 +131,7 @@ class App extends Component {
                         {this.renderNotes()}
                         
                         */}
-                        
+
                     </div>
                 </div>
             </div>

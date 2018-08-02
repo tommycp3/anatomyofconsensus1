@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { googleLogin, twitterLogin } from '../actions/userAction';
 import AboutAOC from './AboutAOC';
+import '../styles/index.css';
+
 
 class Login extends Component {
+
     componentWillMount() {
         if (this.props.user !== null) {
             // console.log(this.props.history);
@@ -15,7 +18,9 @@ class Login extends Component {
         if (nextProps.user !== null) {
             nextProps.history.push('/');
         }
-    }
+    };
+
+
 
     render() {
         return (
@@ -24,6 +29,8 @@ class Login extends Component {
                     <div className="row text-center">
                         <div className="col-sm-12 jumbotron" style={{ marginTop: '-20px' }}>
                             <h1>Welcome to <b>A</b>natomy<b>O</b>f<b>C</b>onsensus</h1>
+
+                            <h2 style={{ padding: "10px 20px", textAlign: "center", color: "white" }}>ToDo</h2>
                             <p><i>"The best no fluff education system that teaches you the power of blockchain <b>by using it.</b>"</i></p>
                         </div>
                     </div>
@@ -33,7 +40,11 @@ class Login extends Component {
 
                 <div className="container">
                     <div className="col-sm-12 text-center">
-                        <iframe width="560" height="315" src="https://www.youtube.com/embed/h5Krh2ZmZkk" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
+                        <div className="intrinsic-container intrinsic-container-16x9">
+                            <iframe src="https://www.youtube.com/embed/h5Krh2ZmZkk" allowfullscreen></iframe>
+                        </div>
+                        
                     </div>
 
                     <div className="col-sm-12">
@@ -86,7 +97,7 @@ class Login extends Component {
 
 
 
-            </div>
+            </div >
 
         );
     }
