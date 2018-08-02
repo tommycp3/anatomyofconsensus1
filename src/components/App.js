@@ -83,7 +83,7 @@ class App extends Component {
 
 
                         <div className="intrinsic-container intrinsic-container-16x9">
-                            <iframe src="https://www.youtube.com/embed/QX3M8Ka9vUA" allowfullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/QX3M8Ka9vUA" allowFullscreen></iframe>
                         </div>
 
                     </div>
