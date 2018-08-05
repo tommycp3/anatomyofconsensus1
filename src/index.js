@@ -15,6 +15,7 @@ import LoadingComponent from './components/LoadingComponent';
 import AuthenticatedComponent from './components/AuthenticatedComponent';
 import DeveloperComponent from './components/DeveloperComponent';
 import NoteDetail from './components/NoteDetail';
+import 'semantic-ui-css/semantic.min.css';
 
 
 

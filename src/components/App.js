@@ -5,6 +5,7 @@ import { getNotes, saveNote, deleteNote } from '../actions/notesAction';
 import NoteCard from './NoteCard';
 import { getUser } from '../actions/userAction';
 import { Link } from 'react-router-dom';
+import { Button } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -85,7 +86,9 @@ class App extends Component {
                         <div className="intrinsic-container intrinsic-container-16x9">
                             <iframe src="https://www.youtube.com/embed/QX3M8Ka9vUA" allowFullscreen></iframe>
                         </div>
-
+                        <br />
+                        <br />
+                        <Button>Click Here</Button>
                     </div>
                 </div>
 
