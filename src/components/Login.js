@@ -30,7 +30,7 @@ class Login extends Component {
                         <div className="col-sm-12 jumbotron" style={{ marginTop: '-20px' }}>
                             <h1>Welcome to <b>A</b>natomy<b>O</b>f<b>C</b>onsensus</h1>
 
-                            <h2 style={{ padding: "10px 20px", textAlign: "center", color: "white" }}>ToDo</h2>
+                            
                             <p><i>"The best no fluff education system that teaches you the power of blockchain <b>by using it.</b>"</i></p>
                         </div>
                     </div>
