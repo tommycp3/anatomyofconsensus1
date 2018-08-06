@@ -37,7 +37,7 @@ ReactDOM.render(
                             <Header />
                             <Route path="/:id" component={NoteDetail} exact={true} />
                             <Route path="/" component={App} exact={true} />
-                            <Route path="/aoc-starter-pack" component={AOCStarterPack} exact={true}/>
+                            {/*Route path="/aoc-starter-pack" component={AOCStarterPack} exact={true}/>*/}
                         </AuthenticatedComponent>
                     </Switch>
                 </div>
