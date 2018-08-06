@@ -16,6 +16,7 @@ import AuthenticatedComponent from './components/AuthenticatedComponent';
 import DeveloperComponent from './components/DeveloperComponent';
 import NoteDetail from './components/NoteDetail';
 import 'semantic-ui-css/semantic.min.css';
+import AOCStarterPack from './components/AOCStarterPack';
 
 
 
@@ -33,11 +34,12 @@ ReactDOM.render(
                     <Switch>
                         <Route path="/login" component={Login} exact={true} />
                         <Route path="/developers" component={DeveloperComponent} exact={true} />
+                        <Route path="/aoc-starter-pack" component={AOCStarterPack} exact={true}/>
                         <AuthenticatedComponent>
                             <Header />
                             <Route path="/:id" component={NoteDetail} exact={true} />
                             <Route path="/" component={App} exact={true} />
-                            {/*Route path="/aoc-starter-pack" component={AOCStarterPack} exact={true}/>*/}
+                            {/**/}
                         </AuthenticatedComponent>
                     </Switch>
                 </div>

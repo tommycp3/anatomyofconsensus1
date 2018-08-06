@@ -221,7 +221,7 @@ class App extends Component {
                     </div>
                     <br />
                     <div >
-                        <Link to="/developers">
+                        <Link to="/aoc-starter-pack">
                             <Button fluid positive>Execute First Smart Contract</Button>
                         </Link>
 
