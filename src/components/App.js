@@ -5,7 +5,7 @@ import { getNotes, saveNote, deleteNote } from '../actions/notesAction';
 import NoteCard from './NoteCard';
 import { getUser } from '../actions/userAction';
 import { Link } from 'react-router-dom';
-import { Button } from 'semantic-ui-react'
+import { Accordion, Icon, List, Message, Button, Input } from 'semantic-ui-react'
 
 
 class App extends Component {
@@ -14,7 +14,8 @@ class App extends Component {
         // state
         this.state = {
             title: '',
-            body: ''
+            body: '',
+            activeIndex: 0
         };
         // bind
         this.handleChange = this.handleChange.bind(this);
@@ -72,32 +73,30 @@ class App extends Component {
     }
 
     render() {
+        const { activeIndex } = this.state
         return (
+            <div>
+                <div className="container-fluid">
+                    <div className="row">
+
+                        <div className="col-sm-12 text-center">
+                            <h1></h1>
+                            <p>This system uses blockchain to catalize our human family to the Third Industrial Revolution</p>
 
 
-            <div className="container-fluid">
-                <div className="row">
 
-                    <div className="col-sm-12 text-center">
-                        <h1></h1>
-                        <p>This system uses blockchain to catalize our human family to the Third Industrial Revolution</p>
+                            <br />
+                            <br />
 
-
-                        <div className="intrinsic-container intrinsic-container-16x9">
-                            <iframe src="https://www.youtube.com/embed/QX3M8Ka9vUA" allowFullscreen></iframe>
                         </div>
-                        <br />
-                        <br />
-                        <Button>Click Here</Button>
                     </div>
-                </div>
 
 
 
 
-                <div className="row">
-                    <div className="col-sm-6 col-sm-offset-3">
-                        {/*   
+                    <div className="row">
+                        <div className="col-sm-6 col-sm-offset-3">
+                            {/*   
 
                         <form onSubmit={this.handleSubmit}>
                             <div className="form-group">
@@ -135,9 +134,92 @@ class App extends Component {
                         
                         */}
 
+                        </div>
                     </div>
                 </div>
+
+
+
+                <div className="container" >
+
+
+
+                    <h3>How to to get access to AOC starter pack</h3>
+                    <Accordion fluid styled>
+                        <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
+                            <Icon name='dropdown' />
+                            1. Create an account at <a target="_blank" href="http://www.cointree.com.au">CoinTree</a>
+                        </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 0}>
+                            <p>In Australia <a target="_blank" href="http://www.cointree.com.au">CoinTree</a> is a site that allows you to convert AUD to cryptocurrencies.</p>
+
+                            <div className="intrinsic-container intrinsic-container-16x9">
+                                <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
+                            </div>
+                        </Accordion.Content>
+
+                        <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}>
+                            <Icon name='dropdown' />
+                            2. Acquire some bitcoin with a Cash Deposit (fastest way)
+                    </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 1}>
+                            <div className="intrinsic-container intrinsic-container-16x9">
+                                <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
+                            </div>
+                        </Accordion.Content>
+
+                        <Accordion.Title active={activeIndex === 2} index={2} onClick={this.handleClick}>
+                            <Icon name='dropdown' />
+                            3. Convert Bitcoin to Ether
+                    </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 2}>
+                            <div className="intrinsic-container intrinsic-container-16x9">
+                                <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
+                            </div>
+                        </Accordion.Content>
+
+                        <Accordion.Title active={activeIndex === 3} index={3} onClick={this.handleClick}>
+                            <Icon name='dropdown' />
+                            4. Setup Your MetaMask Wallet
+                    </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 3}>
+                            <div className="intrinsic-container intrinsic-container-16x9">
+                                <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
+                            </div>
+                        </Accordion.Content>
+
+                        <Accordion.Title active={activeIndex === 4} index={4} onClick={this.handleClick}>
+                            <Icon name='dropdown' />
+                            5. Send Ether to your new MetaMask account
+                    </Accordion.Title>
+                        <Accordion.Content active={activeIndex === 4}>
+                            <div className="intrinsic-container intrinsic-container-16x9">
+                                <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
+                            </div>
+                        </Accordion.Content>
+                    </Accordion>
+
+                    <br />
+
+                    <div>
+                        <Message size='mini' warning>
+                            <Message.Header>Warning!</Message.Header>
+                            <p>Until you understand how to protect yourself from hackers we advise not to hold more than 0.3 Ether.  We will teach you how to manage large sums of value after you experience executing your first real smart contract.</p>
+                        </Message>
+                    </div>
+                    <br />
+                    <div >
+
+                        <Button fluid positive>Execute First Smart Contract</Button>
+
+                    </div>
+
+
+                </div >
+
             </div>
+
+
         );
     }
 }

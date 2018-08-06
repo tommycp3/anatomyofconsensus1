@@ -42,7 +42,7 @@ class Login extends Component {
                     <div className="col-sm-12 text-center">
 
                         <div className="intrinsic-container intrinsic-container-16x9">
-                            <iframe src="https://www.youtube.com/embed/h5Krh2ZmZkk" allowFullscreen></iframe>
+                            <iframe src="https://www.youtube.com/embed/h5Krh2ZmZkk"></iframe>
                         </div>
                         
                     </div>
