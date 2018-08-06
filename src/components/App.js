@@ -23,6 +23,15 @@ class App extends Component {
         this.renderNotes = this.renderNotes.bind(this);
     }
 
+
+    handleClick = (e, titleProps) => {
+        const { index } = titleProps
+        const { activeIndex } = this.state
+        const newIndex = activeIndex === index ? -1 : index
+
+        this.setState({ activeIndex: newIndex })
+    }
+
     // handle change
     handleChange(e) {
         this.setState({
@@ -141,9 +150,6 @@ class App extends Component {
 
 
                 <div className="container" >
-
-
-
                     <h3>How to to get access to AOC starter pack</h3>
                     <Accordion fluid styled>
                         <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick}>
