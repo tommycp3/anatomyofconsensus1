@@ -162,6 +162,8 @@ class App extends Component {
                             <div className="intrinsic-container intrinsic-container-16x9">
                                 <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
                             </div>
+
+                            {/* https://codepen.io/jk6/pen/vKBNJp */}
                         </Accordion.Content>
 
                         <Accordion.Title active={activeIndex === 1} index={1} onClick={this.handleClick}>
@@ -172,6 +174,7 @@ class App extends Component {
                             <div className="intrinsic-container intrinsic-container-16x9">
                                 <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
                             </div>
+                            {/* https://codepen.io/jk6/pen/vKBNJp */}
                         </Accordion.Content>
 
                         <Accordion.Title active={activeIndex === 2} index={2} onClick={this.handleClick}>
@@ -182,6 +185,7 @@ class App extends Component {
                             <div className="intrinsic-container intrinsic-container-16x9">
                                 <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
                             </div>
+                            {/* https://codepen.io/jk6/pen/vKBNJp */}
                         </Accordion.Content>
 
                         <Accordion.Title active={activeIndex === 3} index={3} onClick={this.handleClick}>
@@ -192,6 +196,7 @@ class App extends Component {
                             <div className="intrinsic-container intrinsic-container-16x9">
                                 <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
                             </div>
+                            {/* https://codepen.io/jk6/pen/vKBNJp */}
                         </Accordion.Content>
 
                         <Accordion.Title active={activeIndex === 4} index={4} onClick={this.handleClick}>
@@ -202,6 +207,7 @@ class App extends Component {
                             <div className="intrinsic-container intrinsic-container-16x9">
                                 <iframe src="https://www.youtube.com/embed/ARkWiMqCu3U"></iframe>
                             </div>
+                            {/* https://codepen.io/jk6/pen/vKBNJp */}
                         </Accordion.Content>
                     </Accordion>
 
